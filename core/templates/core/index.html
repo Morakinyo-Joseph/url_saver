@@ -1,0 +1,13 @@
+
+<ul>
+    {% for url in url %}
+
+        <li>
+            <a href="{{ url.url_name }}">{{ url.url_name }}</a>
+            <p>
+                saved on: {{ url.time_saved }}
+            </p>
+        </li>
+
+    {% endfor %}
+</ul>
