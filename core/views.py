@@ -6,9 +6,9 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-def index(request):
+def viewer(request):
     url = UrlModel.objects.all()
-    return render(request, 'core/index.html', {"url": url})
+    return render(request, 'core/viewer.html', {"url": url})
 
 
 def create(request):

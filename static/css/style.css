@@ -1,0 +1,152 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+#header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #38b000;
+    color: #FFFFFF
+}
+
+.company-name {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 32px;
+    padding-right: 770px;
+}
+
+.company-link {
+    color: white;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.menu :hover {
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+a.nav-link:hover {
+    background-color: #29bf12;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: inherit;
+}
+
+button.create {
+    flex-direction: row;
+    color: white;
+    height: 70px;
+    width: 50%;
+    background-color: #29bf12;
+    font-family: monospace;
+    font-size: 30px;
+    border-radius: 7px;
+    border: none;
+}
+
+.create:hover {
+    background-color: #38b000;
+    color: white;
+}
+
+div.create-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.saved-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a.create-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.link-div {
+    text-decoration: none;
+}
+
+section.saved-url {
+    background-color: #F3F4F6;
+    width: 80%;
+    height: 150px;
+    border-radius: 7px;
+}
+
+.saved-div :hover {
+    background-color: #dee2e6;
+}
+
+.link-text {
+    padding-left: 100px;
+    font-size: 30px;
+    color: black;
+}
+
+.date-text {
+    padding-left: 100px;
+    color: grey;
+}
+
+.edit-button {
+    background-color: #29bf12;
+    height: 30px;
+    width: 60px;
+    margin-left: 80%;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #38b000;
+}
+
+.delete-button {
+    background-color: #29bf12;
+    height: 30px;
+    width: 60px;
+    margin-left: 1%;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: red;
+}
+
+hr {
+    border-color: #fcfafa;
+    width: 80%;
+    height: 1px;
+    background-color: #fcfafa;
+}
