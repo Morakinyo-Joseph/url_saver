@@ -3,40 +3,44 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 
-
-    <br><br><br>
-    <div class=create-div>
-        <button type="button" class="create">
-            <a class="create-link" href="{% url 'user:create' %}">CREATE</a>
-        </button>
-    </div>
-<br>
-<hr>
-
-{% for url in url reversed %}
-    <div class="urls">
-        <br><br>
-
-        <div class="saved-div">
-            <section class="saved-url">
-                <a href="{{ url.url_name }}" target="_blank" class="link-div">
-                    <p class="link-text"><span style="color: black"><i class="fa-solid fa-globe"></i></span>&nbsp;
-                        {{ url.url_name|truncatewords:10 }}
-                    </p>
-                    <p class="date-text"><span style="color: black">&nbsp;<i class="fa-solid fa-calendar fa-xl"></i></span>
-                        &nbsp; &nbsp; &nbsp; Saved on: 1<sup>st</sup> {{ url.time_saved }}
-                    </p>
-                </a>
-            </section>
-        </div>
         <br>
-        <button class="edit-button" type="button"> <a href="#" style="text-decoration: none;">Edit</a> </button>
-        <button class="delete-button" type="button"> <a href="#" style="text-decoration: none;">Delete</a> </button>
-        <hr>
-    </div>
+        <div class=create-div>
+            <button type="button" class="create">
+                <a class="create-link" href="{% url 'user:create' %}">CREATE</a>
+            </button>
+        </div>
+    <br>
+    <hr>
 
-{% endfor %}
+    {% for url in url reversed %}
+        <div class="urls">
+            <br><br>
+
+            <div class="saved-div">
+                <section class="saved-url">
+                    <a href="{{ url.url_name }}" target="_blank" class="link-div">
+                        <p class="link-text"><span style="color: black"><i class="fa-solid fa-globe"></i></span>&nbsp;
+                            {{ url.url_name }}
+                        </p>
+                        <p class="date-text"><span style="color: black">&nbsp;<i class="fa-solid fa-calendar fa-xl"></i></span>
+                            &nbsp; &nbsp; &nbsp; Saved on: {{ url.time_saved }}
+                        </p>
+                    </a>
+                </section>
+            </div>
+            <br>
+            <button class="edit-button" type="button"> <a href="#" style="text-decoration: none;">Edit</a> </button>
+            <button class="delete-button" type="button"> <a href="#" style="text-decoration: none;">Delete</a> </button>
+            <hr>
+        </div>
+
+    {% endfor %}
+
+{% else %}
+    <h1>Click on Signup to create urls</h1>
+{% endif %}
 
 {% endblock %}
 

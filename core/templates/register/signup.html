@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+
+    <p>First Name: </p>
+    <input type="text", name="first_name">
+
+    <p>Surname: </P>
+    <input type="text", name="last_name">
+
+    <p>Email: </P>
+    <input type="email", name="email">
+    
+    <p>Password: </P>
+    <input type="text", name="password1">
+
+    <p>Confirm Password: </P>
+    <input type="text", name="password2">
+
+    
+
+    
+
+</form>
+
+{% endblock %}

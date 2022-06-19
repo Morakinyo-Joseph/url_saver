@@ -2,11 +2,18 @@
 <header id="header">
     <nav id="nav-bar">
         <h2 class="company-name" title="Return to Home Page"><a class="company-link" href="">URL Saver</a></h2>
+        
+        {% if user.is_authenticated %}
+            <div class="menu">
+                <a href="" class="nav-link" href="/">Profile</a>
+                <a href="" class="nav-link" href="/" style="margin-right: 20px;">Logout</a>
+            </div>
+        {% else %}
         <div class="menu">
             <a href="" class="nav-link" href="/">Login</a>
-            <a href="" class="nav-link" href="/">Logout</a>
-            <a href="" class="nav-link" href="/" style="margin-right: 20px;">Profile</a>
+            <a href="" class="nav-link" href="/" style="margin-right: 20px;">Signup</a>
         </div>
+        {% endif %}
     </nav>
 </header>
 <br><br><br>

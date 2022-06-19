@@ -86,8 +86,10 @@ div.saved-div {
 }
 
 a.create-link {
+    display: block;
     text-decoration: none;
     color: inherit;
+    width: 100%;
 }
 
 a.link-div {
@@ -107,7 +109,7 @@ section.saved-url {
 
 .link-text {
     padding-left: 100px;
-    font-size: 30px;
+    font-size: 20px;
     color: black;
 }
 
@@ -149,4 +151,15 @@ hr {
     width: 80%;
     height: 1px;
     background-color: #fcfafa;
+}
+
+footer {
+    background-color: #29bf12;
+    height: 100px;
+}
+
+div.footer-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
